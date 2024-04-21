@@ -1,0 +1,11 @@
+dspy-ai
+langchain
+llama-parse
+unstructured
+markdown
+llama-index
+redis
+numpy
+requests
+flask
+gunicorn
