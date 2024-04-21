@@ -9,7 +9,7 @@
             alert("This PoC is developed on a small docker container and has dependencies on serverless APIs thus may take 10-30s to respond. Please be patient.");
             
             $.ajax({
-                url: "http://localhost:5002/chat",
+                url: window.location.protocol + "//" + window.location.hostname + ":5002/chat",
                 type: "POST",
                 data: JSON.stringify({ "question": question }),
                 contentType: "application/json",
