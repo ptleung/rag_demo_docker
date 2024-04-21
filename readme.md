@@ -24,13 +24,13 @@ The architecture of this PoC consists of 5 key components: Azure, Redis, Hugging
 4. Document splitting: `LLAMAPARSE` is used for parsing PDF files to MD files. It is proved to be one of the best pdf parsing tool pubically available. After it is parsed as text and splitted using langchain toker splitters, a cleaned document name is added to the beginning of each of the text chunks so that it will be possible for the vector DB searching algorithm to extract to respective section from the correct document. However, it loses some information when convert back to text from table format can be further improved.
 
 ## Use the chatbot
-The code has been deployed on Azure using ACI (container). You can call the API directly to test the chatbot referring to the below section.
+The code has been deployed on Azure using ACI (container). You can call the API directly to test the chatbot referring to the below section. You may also use the webpage deployed in the same flask app referring to the later section.
 
-Some sample outputs of the chatbot is ready on the Appendix section.
+Some sample outputs of the chatbot with API/webpage is ready on the Appendix section.
 
 
 ### Calling the API
-API address: http://ragdockerdemopublic.eze0fyfwcca4dud4.eastasia.azurecontainer.io:5002/
+API address: http://ragdockerdemopublic.eze0fyfwcca4dud4.eastasia.azurecontainer.io:5002/chat
 
 Note for performance: **Minimal resources** is used to deploy the solution and it has external dependencies in this PoC(including serverless LLM models on public cloud), the API may ran into some issues when calling the external dependencies. 
 
@@ -44,6 +44,12 @@ The API returns 3 keys in json format:
 1. question (str): Returns the questions directly
 2. context (str): Returns the PDF sections that the chatbot used to generate the answer
 3. answer (str): Returns the answer of the question with the context provided
+
+### Calling the Webpage
+Webpage address: http://ragdockerdemopublic-htmlchatpage.cnbxd7c3ctdvb2d4.eastasia.azurecontainer.io:5002/chatwebsite
+
+Note: Please note that the performance issue also happens to this webpage as it calls the same API in the backend. If you cant get any results in 1 minute, please hit "Ask" button again.
+
 
 ## How to deploy the code locally or on cloud
 ### Configuration and API consumption
@@ -75,6 +81,17 @@ There are two ways to deploy the codes, both offers to deploy an API either with
 
 
 ## Appendix
+
+### Sample & guide wepage results
+This is a demonstration on how to use the website.
+
+1. Please enter your question in the chatbox.
+2. You will receive a pop up notification that mentions the chatbot depends on popular serverless APIs (e.g. HuggingFace SoTA models) thus may take a while. You may hit "Ask" button again if you dont see anything showing up in the below text box in 1 minute.
+![screenshot](sample_outputs/Chatwebpage_UI_warning.png)
+3. You will see the results returned answer in the chatbox when the result is ready.
+![screenshot](sample_outputs/Chatwebpage_UI_sample.png)
+
+
 ### Sample API results
 1. Ansering product specific question. It can provide the details of the product mentioned in PDF in text format.
 ![screenshot](sample_outputs/question1_output.png)

@@ -2,7 +2,7 @@ import dspy
 import os
 from flask import Flask, request, jsonify, render_template
 from redisretriever import DSPythonicRMClient
-from config.llm import TOGETHER_API_URL, TOGETHER_API_KEY, TOGETHER_MODEL_ID, USE_INST_TEMPLATE, DSPY_INPUT_DESC, DSPY_OUTPUT_DESC
+from config.llm import TOGETHER_MODEL_ID, USE_INST_TEMPLATE, DSPY_INPUT_DESC, DSPY_OUTPUT_DESC
 from config.vectordb import REDIS_URL, REDIS_PORT, NUM_DOCS_RETURNED
 
 
