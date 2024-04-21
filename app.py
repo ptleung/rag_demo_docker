@@ -1,11 +1,12 @@
 import dspy
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from redisretriever import DSPythonicRMClient
 from config.llm import TOGETHER_API_URL, TOGETHER_API_KEY, TOGETHER_MODEL_ID, USE_INST_TEMPLATE, DSPY_INPUT_DESC, DSPY_OUTPUT_DESC
 from config.vectordb import REDIS_URL, REDIS_PORT, NUM_DOCS_RETURNED
 
-# os.environ['TOGETHER_API_BASE'] = TOGETHER_API_URL  # uncomment if the environment variable is not set
+# uncomment below two lines if the environment variable is not set and you wish to hard code
+# os.environ['TOGETHER_API_BASE'] = TOGETHER_API_URL  
 # os.environ['TOGETHER_API_KEY'] = TOGETHER_API_KEY
 
 retriever = DSPythonicRMClient(REDIS_URL, REDIS_PORT, NUM_DOCS_RETURNED)
@@ -60,6 +61,9 @@ def api():
             "answer": answer
         }), 200
 
+@app.route('/chatwebsite', methods=['GET'])
+def chatwebsite():
+    return render_template('chatwebsite.html')
 
 if __name__ == '__main__':
     app.run(port=5002, debug=True)

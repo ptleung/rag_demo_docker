@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask a Question</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function askQuestion() {
+            var question = document.getElementById("question").value;
+            alert("This PoC is developed on a small docker container and has dependencies on serverless APIs thus may take 10-30s to respond. Please be patient.");
+            
+            $.ajax({
+                url: "http://localhost:5002/chat",
+                type: "POST",
+                data: JSON.stringify({ "question": question }),
+                contentType: "application/json",
+                success: function(response) {
+                    var answer = response.answer;
+                    document.getElementById('result2').value = answer;
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <input style="width: 50%;" type="text" id="question" placeholder="Enter your question">
+    <button onclick="askQuestion()">Ask</button>
+    <textarea disabled id="result2" name="w3review" rows="4" cols="50" style="width: 50%; height: 300px"></textarea>
+</body>
+</html>
