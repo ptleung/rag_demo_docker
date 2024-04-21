@@ -14,7 +14,7 @@ PARSING_INSTRUCTION = """The provided documents are different insurance products
 HUGGINGFACE_MODEL_ID = "WhereIsAI/UAE-Large-V1"
 HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY")
 HUGGINGFACE_EMBEDDING_MODEL_URL = f"https://api-inference.huggingface.co/models/{HUGGINGFACE_MODEL_ID}"
-HUGGINGFACE_EMBEDDING_API_HEADERS = {"Authorization": f"Bearer {HUGGINGFACE_API_KEY}"} 
+HUGGINGFACE_EMBEDDING_API_HEADERS = {"Authorization": f"Bearer {HUGGINGFACE_API_KEY}"}
 
 REDIS_ACCT = os.getenv("REDIS_ACCT")
 REDIS_PW = os.getenv("REDIS_PW")
