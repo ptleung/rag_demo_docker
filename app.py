@@ -5,9 +5,6 @@ from redisretriever import DSPythonicRMClient
 from config.llm import TOGETHER_API_URL, TOGETHER_API_KEY, TOGETHER_MODEL_ID, USE_INST_TEMPLATE, DSPY_INPUT_DESC, DSPY_OUTPUT_DESC
 from config.vectordb import REDIS_URL, REDIS_PORT, NUM_DOCS_RETURNED
 
-# uncomment below two lines if the environment variable is not set and you wish to hard code
-# os.environ['TOGETHER_API_BASE'] = TOGETHER_API_URL  
-# os.environ['TOGETHER_API_KEY'] = TOGETHER_API_KEY
 
 retriever = DSPythonicRMClient(REDIS_URL, REDIS_PORT, NUM_DOCS_RETURNED)
 together = dspy.Together(model=TOGETHER_MODEL_ID)

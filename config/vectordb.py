@@ -1,4 +1,12 @@
 import os
+from utils.utils import declare_env_vars
+
+# For convenient purposes, user may declare environment variables in the code
+# Note that system declared environment variables will take precedence
+declare_env_vars("LLAMAPARSE_API_KEY", None) 
+declare_env_vars("HUGGINGFACE_API_KEY", None)
+declare_env_vars("REDIS_ACCT", None)
+declare_env_vars("REDIS_PW", None)
 
 LLAMAPARSE_API_KEY = os.getenv("LLAMAPARSE_API_KEY")
 

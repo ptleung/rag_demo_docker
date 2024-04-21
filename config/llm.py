@@ -1,4 +1,10 @@
 import os
+from utils.utils import declare_env_vars
+
+# For convenient purposes, user may declare environment variables in the code
+# Note that system declared environment variables will take precedence
+declare_env_vars("TOGETHER_API_KEY", None)
+declare_env_vars("TOGETHER_API_BASE", None)
 
 TOGETHER_API_URL = os.getenv('TOGETHER_API_BASE')
 TOGETHER_API_KEY = os.getenv('TOGETHER_API_KEY')

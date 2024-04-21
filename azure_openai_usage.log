@@ -305,3 +305,52 @@
  * Running on http://127.0.0.1:5002
 [33mPress CTRL+C to quit[0m
  * Restarting with stat
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+127.0.0.1 - - [22/Apr/2024 01:35:28] "POST /chat HTTP/1.1" 200 -
+ * Detected change in '/Users/plato/Documents/Programs/rag_demo_docker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+ * Detected change in '/Users/plato/Documents/Programs/rag_demo_docker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+ * Detected change in '/Users/plato/Documents/Programs/rag_demo_docker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5002
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+127.0.0.1 - - [22/Apr/2024 01:44:04] "GET /chatwebsite HTTP/1.1" 200 -
+127.0.0.1 - - [22/Apr/2024 01:44:17] "POST /chat HTTP/1.1" 200 -
+ * Detected change in '/Users/plato/Documents/Programs/rag_demo_docker/config/llm.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+ * Detected change in '/Users/plato/Documents/Programs/rag_demo_docker/app.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+ * Detected change in '/Users/plato/Documents/Programs/rag_demo_docker/utils/utils.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+ * Detected change in '/Users/plato/Documents/Programs/rag_demo_docker/config/vectordb.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+ * Detected change in '/Users/plato/Documents/Programs/rag_demo_docker/config/llm.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-697-613
+127.0.0.1 - - [22/Apr/2024 01:49:13] "GET /chatwebsite HTTP/1.1" 200 -
+127.0.0.1 - - [22/Apr/2024 01:49:31] "POST /chat HTTP/1.1" 200 -

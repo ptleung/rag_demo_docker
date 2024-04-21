@@ -1,4 +1,5 @@
 import copy
+import os
 
 class dotdict(dict):
     def __getattr__(self, key):
@@ -24,3 +25,8 @@ class dotdict(dict):
     def __deepcopy__(self, memo):
         # Use the default dict copying method to avoid infinite recursion.
         return dotdict(copy.deepcopy(dict(self), memo))
+
+def declare_env_vars(var_name, var_value):
+    """Declare environment variables if they do not exist,else use the existing value."""
+    if var_name not in os.environ.keys():
+        os.environ[var_name] = var_value
