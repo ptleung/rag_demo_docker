@@ -24,7 +24,7 @@ class DSPythonicRMClient(dspy.Retrieve):
     
     def _query_embedding_api(self, payload):
         """Query Hugging Face Embedding API."""
-        response = requests.post(HUGGINGFACE_EMBEDDING_MODEL_URL, headers={"Authorization": "Bearer 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"}, json=payload)
+        response = requests.post(HUGGINGFACE_EMBEDDING_MODEL_URL, headers=HUGGINGFACE_EMBEDDING_API_HEADERS, json=payload)
         return response.json()
 
     def _get_input_embedding(self, input):
