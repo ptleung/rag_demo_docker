@@ -21,7 +21,7 @@ The architecture of this PoC consists of 5 key components: Azure, Redis, Hugging
 1. Architecture: All components of the solution leverages cloud technology. The solution can be scaled up/down easily according to the needs of the business case.
 2. Prompts: The prompts are handled by the `DSPY` framework. A simple `CoT (Chain of Thought)` and `Signature` components are used in this PoC. The prompt is designed to ask the LLM model to generate short, fact based answers based on the content provided by the content search components in `OutputField` component in the on top of the `Signature` class.
 3. LLM params: The LLM text generation params are kept as default to encourage the model predict short, precise, fact based answers (e.g. temperature is set to 0, repetition_penalty = 1 etc.)
-4. Document splitting: `LLAMAPARSE` is used for parsing PDF files to MD files. It is proved to be one of the best pdf parsing tool pubically available. However, it loses some information when convert back to text which can be further improved.
+4. Document splitting: `LLAMAPARSE` is used for parsing PDF files to MD files. It is proved to be one of the best pdf parsing tool pubically available. After it is parsed as text and splitted using langchain toker splitters, a cleaned document name is added to the beginning of each of the text chunks so that it will be possible for the vector DB searching algorithm to extract to respective section from the correct document. However, it loses some information when convert back to text from table format can be further improved.
 
 ## Use the chatbot
 The code has been deployed on Azure using ACI (container). You can call the API directly to test the chatbot referring to the below section.
