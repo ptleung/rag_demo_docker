@@ -65,7 +65,7 @@ In order for successful deployment, you will need to update the API URL & creden
 ### Deployment
 There are two ways to deploy the codes, both offers to deploy an API either with directly with venv or docker. 
 1. Deploy directly with venv: You may create a virtual environment and install all the required packages using `requirements.txt` and then run `app.py` to use flask to deploy API for API call. 
-2. Deploy with container: The code is already packaged into a docker image. You may use the docker repo `plato1994/ragchatbotdemodocker` and deploy it locally/ on cloud.
+2. Deploy with container: The code is already packaged into a docker image. You may use the docker repo `plato1994/ragchatbotdemodocker:publish` and deploy it locally/ on cloud.
 
 ### Optional
 1. You may wish to add some more documents into the vector database. You can add new pdf documents under `docs` folder then run `build_vectorbase.py` to add new documents into the vector DB.
