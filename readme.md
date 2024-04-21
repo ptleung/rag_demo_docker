@@ -48,12 +48,12 @@ The API returns 3 keys in json format:
 ## How to deploy the code locally or on cloud
 ### Configuration and API consumption
 In order for successful deployment, you will need to update the API URL & credentials in your environment variables (Details of the architecture will be discussed in the later sections):
-1. `TOGETHER_API_URL`: For LLM, you may get their API key on their website
-2. `TOGETHER_API_KEY`: For LLM, you may get their API key on their website
+1. `TOGETHER_API_URL`: For LLM, just input https://api.together.xyz/inference. Please make sure this is in your environment variable, you may get `TypeError: float() argument must be a string or a real number, not 'dict'` if the env var is not found
+2. `TOGETHER_API_KEY`: For LLM, you may get their API key on their website. Please make sure this is in your environment variable, you may get `TypeError: float() argument must be a string or a real number, not 'dict'` if the env var is not found
 3. `HUGGINGFACE_API_KEY`: For calling the embedding model
 4. `LLAMAPARSE_API_KEY`: For PDF parsing, only if you wish to update the knowledge base
-5. `REDIS_ACCT`: For storing/caching the vectors used as knowledge base
-6. `REDIS_PW`: For storing/caching the vectors used as knowledge base
+5. `REDIS_ACCT`: For Redis, please input your DB account name
+6. `REDIS_PW`: For Redis, please input your DB account password
 
 
 ### Deployment
