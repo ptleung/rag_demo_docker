@@ -45,7 +45,7 @@ The API returns 3 keys in json format:
 2. context (str): Returns the PDF sections that the chatbot used to generate the answer
 3. answer (str): Returns the answer of the question with the context provided
 
-### Calling the Webpage
+### Using the Webpage interface
 Webpage address: http://ragdockerdemopublic-htmlchatpage.cnbxd7c3ctdvb2d4.eastasia.azurecontainer.io:5002/chatwebsite
 
 Note: Please note that the performance issue also happens to this webpage as it calls the same API in the backend. If you cant get any results in 1 minute, please hit "Ask" button again.
