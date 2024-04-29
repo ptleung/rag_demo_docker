@@ -72,8 +72,8 @@ There are two ways to deploy the codes, both offers to deploy an API either with
 2. You may wish to use other components (LLM models/embeddings etc.). You can change the LLM model or change the parameters used in this deployment. You may find all the configuration settings under `config` folder. E.g. You may use another LLM for the chatbot by changing `TOGETHER_MODEL_ID` under `config/llm.py`
 
 ## Next steps and improvements
-1. Adjust the LLM params & instruction prompt for better response (e.g. provided the answer with the right amount of details)
-2. Improve parsing especially for unstructired table contents and inforation that is scattered in the PDF
+1. Improve parsing especially for unstructired table contents and information that is scattered in the PDF
+2. Adjust the LLM params & instruction prompt for better response (e.g. provided the answer with the right amount of details)
 3. Test implementing ReAct/assertions/ suggestions
 4. Prepare small data from business user for few shot learning
 5. Build Responsible AI framework on top of the solution
